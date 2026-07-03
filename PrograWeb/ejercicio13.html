@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13 - Verificación de Voto</title>
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .tarjeta {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            max-width: 320px;
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+        .grupo {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #34495e;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[readonly] {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            font-weight: bold;
+            text-align: center;
+            cursor: not-allowed;
+        }
+        button {
+            width: 100%;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .error {
+            color: #e74c3c;
+            font-size: 13px;
+            margin-top: 5px;
+            display: block;
+            min-height: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tarjeta">
+        <h2>Sistema de Votación</h2>
+        
+        <form onsubmit="return false;">
+            
+            <div class="grupo">
+                <label for="inputEdad">Ingresa tu edad:</label>
+                <input type="text" id="inputEdad" placeholder="Ej: 20">
+                <span id="mensajeError" class="error"></span>
+            </div>
+            
+            <div class="grupo">
+                <button type="button" id="btnVerificar">Verificar</button>
+            </div>
+            
+            <div class="grupo">
+                <label for="inputResultado">Estado:</label>
+                <!-- Caja de texto readonly -->
+                <input type="text" id="inputResultado" readonly placeholder="Esperando edad...">
+            </div>
+            
+        </form>
+    </div>
+
+    <script src="js/ejercicio13.js"></script>
+
+</body>
+</html>
