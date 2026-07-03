@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISTEMA MAESTRO (Local) | Progra Web II</title>
+
+    <!-- BOOTSTRAP CSS LOCAL (En modo oscuro) -->
+    <!-- Salimos de practica-bootstrap, entramos a bootstrap/css -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+</head>
+<body class="bg-dark text-light">
+
+    <!-- BARRA DE NAVEGACIÓN MODERNA -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-info" href="#">BW Boot-Web</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                <a class="nav-link" href="#">Componentes</a>
+                <a class="nav-link" href="#">Pruebas</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="container mt-5">
+        
+        <!-- SECCIÓN HERO (Encabezado Chingón con Neón) -->
+        <div class="p-5 mb-4 rounded-3 border border-primary shadow-lg bg-black" style="border-width: 3px !important; box-shadow: 0 0 20px rgba(13, 110, 253, 0.5) !important;">
+            <div class="container-fluid py-2 text-center">
+                <h1 class="display-3 fw-bold" style="background: linear-gradient(90deg, #0dcaf0, #d63384); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">¡BIENVENIDO!</h1>
+                <p class="fs-4 lead mt-3">Bootstrap & SweetAlert: Activados (Local).</p>
+                <hr class="my-4 border-info">
+                
+                <!-- BOTÓN CON DISEÑO CHIDO Y PULSANTE -->
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-4">
+                    <button class="btn btn-outline-info btn-lg px-5 py-3 fw-bold rounded-pill shadow-sm" id="btn-test-alerta" style="border-width: 2px; animation: glowPulse 2s infinite; transition: all 0.3s ease;">
+                        🚀 LANZAR ALERTA ÉPICA (SweetAlert2)
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN DE CARACTERÍSTICAS Y MOTIVACIÓN -->
+        <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+            
+            <div class="col">
+                <div class="card h-100 border-info bg-black text-center shadow-sm">
+                    <div class="card-body">
+                        <h1 class="display-3 text-info">✨</h1>
+                        <h5 class="card-title fw-bold">MODERNIDAD TOTAL</h5>
+                        <p class="card-text text-secondary">
+                            Bootstrap te ahorra horas de CSS básico. Tus sitios se ven modernos al instante.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 border-warning bg-black text-center shadow-sm">
+                    <div class="card-body">
+                        <h1 class="display-3 text-warning">📱</h1>
+                        <h5 class="card-title fw-bold">DISEÑO RESPONSIVO</h5>
+                        <p class="card-text text-secondary">
+                            Utiliza las clases `.col` para que tu página se adapte a cualquier celular automáticamente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 border-success bg-black text-center shadow-sm">
+                    <div class="card-body">
+                        <h1 class="display-3 text-success">📊</h1>
+                        <h5 class="card-title fw-bold">ESTADÍSTICAS PRO</h5>
+                        <div class="row text-start mt-3">
+                            <div class="col text-end"><span class="badge bg-secondary rounded-pill">Usuarios Activos:</span></div>
+                            <div class="col fw-bold text-success">1,376</div>
+                        </div>
+                        <div class="row text-start">
+                            <div class="col text-end"><span class="badge bg-secondary rounded-pill">Errores Completados:</span></div>
+                            <div class="col fw-bold text-warning">159</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ESTILOS ADICIONALES PARA LA ANIMACIÓN DEL BOTÓN -->
+    <style>
+        /* Animación de pulso para el botón */
+        @keyframes glowPulse {
+            0% { box-shadow: 0 0 5px rgba(13, 202, 240, 0.3); border-color: rgba(13, 202, 240, 0.5); }
+            50% { box-shadow: 0 0 25px rgba(13, 202, 240, 0.9); border-color: rgba(13, 202, 240, 1); }
+            100% { box-shadow: 0 0 5px rgba(13, 202, 240, 0.3); border-color: rgba(13, 202, 240, 0.5); }
+        }
+        
+        /* Efecto hover más 'chingon' */
+        #btn-test-alerta:hover {
+            background-color: #0dcaf0;
+            color: black !important;
+            animation: none; /* Detenemos la animación */
+            box-shadow: 0 0 30px rgba(13, 202, 240, 1) !important;
+            transform: scale(1.05);
+        }
+    </style>
+
+    <!-- JAVASCRIPT DE BOOTSTRAP (Local) -->
+    <!-- Salimos de practica-bootstrap, entramos a bootstrap/js -->
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- SWEETALERT2 LOCAL (Está en tu carpeta 'sweetalert' al lado de 'index.html') -->
+    <script src="sweetalert/sweetalert2.all.min.js"></script>
+
+    <!-- SCRIPT DE PRUEBA CHIDA -->
+    <script>
+        // Buscamos el botón "Epic"
+        const miBotonEpico = document.getElementById('btn-test-alerta');
+
+        // Función para lanzar la alerta
+        miBotonEpico.addEventListener('click', function() {
+            Swal.fire({
+                title: '¡Lo lograste, crack!',
+                text: 'Tu primera alerta SweetAlert2 Épica funcionando 100% LOCAL.',
+                icon: 'success',
+                confirmButtonText: 'Genial',
+                background: '#000', // Fondo negro de la alerta
+                color: '#fff', // Texto blanco
+                confirmButtonColor: '#0dcaf0' // Botón de aceptar en cyan
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10 - JS</title>
+
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="ejercicio10.css">
+</head>
+<body>
+
+    <main class="contenedor-principal">
+        <section class="tarjeta">
+
+            <div class="encabezado">
+                <div class="icono">🌡️</div>
+                <h1>Conversor de Temperatura</h1>
+                <p>
+                    Convierte grados Celsius a Fahrenheit de forma rápida,
+                    clara y sencilla.
+                </p>
+            </div>
+
+            <div class="formulario">
+                <label for="celsius">Temperatura en grados Celsius</label>
+                <input 
+                    type="number" 
+                    id="celsius" 
+                    placeholder="Ejemplo: 25"
+                >
+
+                <button onclick="convertirTemperatura()">Convertir</button>
+
+                <label for="fahrenheit">Resultado en grados Fahrenheit</label>
+                <input 
+                    type="text" 
+                    id="fahrenheit" 
+                    placeholder="Aquí aparecerá el resultado"
+                    readonly
+                >
+
+                <p id="mensaje"></p>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="ejercicio10.js"></script>
+</body>
+</html>
