@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 16 - Calculadora con Funciones Flecha</title>
+
+    <link rel="stylesheet" href="css/ejercicio16.css">
+</head>
+<body>
+
+    <main class="contenedor">
+        <section class="calculadora">
+
+            <div class="encabezado">
+                <span class="numero-ejercicio">Ejercicio 16</span>
+                <h1>Calculadora de Números</h1>
+            </div>
+
+            <form class="formulario" onsubmit="return false;">
+
+                <div class="grupo-input">
+                    <label for="numero1">Primer número</label>
+                    <input type="text" id="numero1" placeholder="Ejemplo: 25">
+                </div>
+
+                <div class="grupo-input">
+                    <label for="numero2">Segundo número</label>
+                    <input type="text" id="numero2" placeholder="Ejemplo: 5">
+                </div>
+
+                <div class="botones">
+                    <button type="button" onclick="calcularOperacion('suma')">Sumar</button>
+                    <button type="button" onclick="calcularOperacion('resta')">Restar</button>
+                    <button type="button" onclick="calcularOperacion('multiplicacion')">Multiplicar</button>
+                    <button type="button" onclick="calcularOperacion('division')">Dividir</button>
+                </div>
+
+                <div class="grupo-input resultado-box">
+                    <label for="resultado">Resultado</label>
+                    <input type="text" id="resultado" readonly placeholder="Resultado">
+                </div>
+
+                <button type="button" class="btn-limpiar" onclick="limpiarCalculadora()">Limpiar</button>
+
+            </form>
+
+        </section>
+    </main>
+
+    <!-- SweetAlert2 -->
+    <script src="SweetAlert/sweetalert2.all.min.js"></script>
+
+    <!-- Archivo JavaScript del ejercicio -->
+    <script src="js/ejercicio16.js"></script>
+
+</body>
+</html>
