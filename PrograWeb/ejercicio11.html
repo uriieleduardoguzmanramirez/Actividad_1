@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11 - Conversor de Distancia</title>
+</head>
+<body>
+
+    <h2>Kilómetros a Millas</h2>
+    
+    <form onsubmit="return false;">
+        
+        <div>
+            <label for="inputKm">Distancia en Kilómetros (K):</label>
+            <input type="text" id="inputKm" placeholder="Ej: 10">
+            <span id="mensajeError" style="color: red; font-size: 14px;"></span>
+        </div>
+        
+        <br>
+        <button type="button" id="btnConvertir">Convertir</button>
+        <br><br>
+        
+        <div>
+            <label for="inputMillas">Distancia en Millas (M):</label>
+            <input type="text" id="inputMillas" readonly>
+        </div>
+        
+    </form>
+
+    <script>
+        document.getElementById('btnConvertir').addEventListener('click', function() {
+            
+            let inputKm = document.getElementById('inputKm').value.trim();
+            let mensajeError = document.getElementById('mensajeError');
+            let inputMillas = document.getElementById('inputMillas');
+
+            mensajeError.textContent = "";
+            inputMillas.value = "";
+
+            if (inputKm === "") {
+                mensajeError.textContent = "El campo no puede estar vacío.";
+                return;
+            }
+
+            if (isNaN(inputKm)) {
+                mensajeError.textContent = "Ingresa solo valores numéricos.";
+                return;
+            }
+
+            let K = parseFloat(inputKm);
+            let M = K * 0.621371;
+
+            inputMillas.value = M; 
+        });
+    </script>
+
+</body>
+</html>
